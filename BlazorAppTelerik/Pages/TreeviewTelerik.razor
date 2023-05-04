@@ -1,0 +1,162 @@
+﻿@page "/treeviewtelerik"
+
+<TelerikTreeView OnExpand="@OnExpand"
+                 SelectedItemsChanged="@OnSelect"
+                 OnItemClick="@OnItemClick"
+                 OnItemDoubleClick="@OnItemDoubleClick"
+                 OnItemContextMenu="@OnItemContextMenu"
+                 Data="@FlatData"
+                 @bind-ExpandedItems="@ExpandedItems"
+                 SelectionMode="@SelectionMode">
+    <TreeViewBindings>
+        <TreeViewBinding ParentIdField="ParentIdValue"></TreeViewBinding>
+    </TreeViewBindings>
+</TelerikTreeView>
+<br />
+<h5>@EventLog.Replace('"',' ')</h5>
+
+<DemoConsole EventLog="@EventLog" OnClearLogClick="@OnClearLogClick" />
+
+@code {
+    public class TreeItem
+    {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public int? ParentIdValue { get; set; }
+        public bool HasChildren { get; set; }
+        public FontIcon? Icon { get; set; }
+    }
+
+    public string EventLog { get; set; } = string.Empty;
+
+    public TreeViewSelectionMode SelectionMode { get; set; } = TreeViewSelectionMode.Multiple;
+
+    public IEnumerable<TreeItem> FlatData { get; set; }
+    public IEnumerable<object> ExpandedItems { get; set; }
+
+    protected override void OnInitialized()
+    {
+        LoadFlatData();
+    }
+
+    void OnClearLogClick()
+    {
+        EventLog = string.Empty;
+    }
+
+    public void OnSelect(IEnumerable<object> selectedItems)
+    {
+        var log = "Select event. The following items have been selected in the Tree View";
+
+        foreach (var item in selectedItems)
+        {
+            log += $"{(item as TreeItem).Text}";
+        }
+
+        //log += "</ul></div>";
+
+        EventLog = EventLog.Insert(0, log);
+    }
+
+    public void OnExpand(TreeViewExpandEventArgs args)
+    {
+        var itemText = (args.Item as TreeItem).Text;
+        var eventName = args.Expanded ? "Expand" : "Collapse";
+        var log = $"<{eventName} event Item Text:>{itemText}";
+
+        EventLog = EventLog.Insert(0, log);
+    }
+
+    public void OnItemClick(TreeViewItemClickEventArgs args)
+    {
+        EventLog = string.Empty;
+
+        var itemText = (args.Item as TreeItem).Text;
+        var log = $"Item Click event Text: {itemText}";
+
+        EventLog = EventLog.Insert(0, log);
+    }
+
+    public void OnItemDoubleClick(TreeViewItemDoubleClickEventArgs args)
+    {
+        var itemText = (args.Item as TreeItem).Text;
+        var log = $"Item DoubleClick Text: {itemText}";
+
+        EventLog = EventLog.Insert(0, log);
+    }
+
+    public void OnItemContextMenu(TreeViewItemContextMenuEventArgs args)
+    {
+        var itemText = (args.Item as TreeItem).Text;
+        var log = $"Item ContextMenu event Text: {itemText}";
+
+        EventLog = EventLog.Insert(0, log);
+    }
+
+    private void LoadFlatData()
+    {
+        List<TreeItem> items = new List<TreeItem>();
+        items.Add(new TreeItem()
+        {
+            Id = 1,
+            Text = "Project",
+            ParentIdValue = null,
+            HasChildren = true,
+            Icon = FontIcon.Folder
+        });
+        items.Add(new TreeItem()
+        {
+            Id = 2,
+            Text = "Design",
+            ParentIdValue = 1,
+            HasChildren = true,
+            Icon = FontIcon.Brush
+        });
+        items.Add(new TreeItem()
+        {
+            Id = 3,
+            Text = "Implementation",
+            ParentIdValue = 1,
+            HasChildren = true,
+            Icon = FontIcon.Folder
+        });
+
+        items.Add(new TreeItem()
+        {
+            Id = 4,
+            Text = "site.psd",
+            ParentIdValue = 2,
+            HasChildren = false,
+            Icon = FontIcon.FilePsd
+        });
+
+        items.Add(new TreeItem()
+        {
+            Id = 5,
+            Text = "index.js",
+            ParentIdValue = 3,
+            HasChildren = false,
+            Icon = FontIcon.Js
+        });
+        items.Add(new TreeItem()
+        {
+            Id = 6,
+            Text = "index.html",
+            ParentIdValue = 3,
+            HasChildren = false,
+            Icon = FontIcon.Code
+        });
+
+        items.Add(new TreeItem()
+        {
+            Id = 7,
+            Text = "styles.css",
+            ParentIdValue = 3,
+            HasChildren = false,
+            Icon = FontIcon.Css
+        });
+
+        FlatData = items;
+        ExpandedItems = items.Take(3);
+    }
+}

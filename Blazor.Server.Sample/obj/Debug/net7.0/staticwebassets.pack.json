@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Blazor.Server.Sample.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Blazor.Server.Sample.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\__CODEBASE\\BlazorTelerik\\Blazor.Server.Sample\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Blazor.Server.Sample.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Blazor.Server.Sample.props",
+      "PackagePath": "build\\Blazor.Server.Sample.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Blazor.Server.Sample.props",
+      "PackagePath": "buildMultiTargeting\\Blazor.Server.Sample.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Blazor.Server.Sample.props",
+      "PackagePath": "buildTransitive\\Blazor.Server.Sample.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
